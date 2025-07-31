@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureString Foundry</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <main class="app-container">
+        <h1>SecureString Foundry</h1>
+
+        <section class="controls-section">
+            <div class="control-group">
+                <label for="passwordLength">Length: <span id="lengthValue">16</span></label>
+                <input type="range" id="passwordLength" min="8" max="64" value="16">
+            </div>
+
+            <div class="control-group">
+                <input type="checkbox" id="includeUppercase" checked>
+                <label for="includeUppercase">Include Uppercase (A-Z)</label>
+            </div>
+            <div class="control-group">
+                <input type="checkbox" id="includeLowercase" checked>
+                <label for="includeLowercase">Include Lowercase (a-z)</label>
+            </div>
+            <div class="control-group">
+                <input type="checkbox" id="includeNumbers" checked>
+                <label for="includeNumbers">Include Numbers (0-9)</label>
+            </div>
+            <div class="control-group">
+                <input type="checkbox" id="includeSymbols" checked>
+                <label for="includeSymbols">Include Symbols (!@#$%)</label>
+            </div>
+
+            <div class="control-group">
+                <label for="excludeCharacters">Exclude Characters:</label>
+                <input type="text" id="excludeCharacters" placeholder="e.g., iIlLoO0">
+            </div>
+
+            <button id="generateBtn">GENERATE PASSWORD</button>
+        </section>
+
+        <section class="output-section">
+            <label for="generatedPassword">Generated Password:</label>
+            <input type="text" id="generatedPassword" readonly placeholder="Your strong password will appear here...">
+            <button id="copyBtn">COPY</button>
+        </section>
+
+        <div id="errorMessage" class="error-message"></div>
+    </main>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
